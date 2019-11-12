@@ -3,7 +3,9 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Foreword - Discord Bot Designer - Wiki</title>
+        <title>Discord Bot Designer - Wiki</title>
+        
+        <meta name="robots" content="noindex" />
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -151,6 +153,83 @@
                         <h1><a class="header" href="#foreword" id="foreword">Foreword</a></h1>
 <p>Welcome to our humble abode. The thing you're seeing is <em>Bot Designer for Discord</em>'s wiki.
 If you're curious about <em>functions</em> please feel free to visit <a href="functions/introduction.html">this section</a>.</p>
+<h1><a class="header" href="#changelog-wip" id="changelog-wip">Changelog (W.I.P)</a></h1>
+<h1><a class="header" href="#plans" id="plans">Plans</a></h1>
+<ul>
+<li>Better web experience</li>
+<li>Create more wiki articles</li>
+<li>Better JavaScript support</li>
+<li>Premium</li>
+<li>Fix brackets</li>
+<li>Add more translations</li>
+<li>$roleRank[roleID]</li>
+</ul>
+<p><em>(We probably forgot about adding something to this list so we will update this if needed)</em></p>
+<h1><a class="header" href="#functions-introduction" id="functions-introduction">Functions introduction</a></h1>
+<p>In this section of wiki you will learn about some of the useful functions.<br />
+Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
+They are heart and soul of your bot. Remember that functions start with <code>$</code>.<br />
+For example <code>$nomention</code> or <code>$ping</code>.</p>
+<h1><a class="header" href="#functions-introduction-1" id="functions-introduction-1">Functions introduction</a></h1>
+<p>In this section of wiki you will learn about some of the useful functions.<br />
+Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
+They are heart and soul of your bot. Remember that functions start with <code>$</code>.<br />
+For example <code>$nomention</code> or <code>$ping</code>.</p>
+<h1><a class="header" href="#ping" id="ping">$ping</a></h1>
+<p>Shows the delay between sent message and bot's response.
+The value of <code>$ping</code> is expressed in miliseconds.</p>
+<h2><a class="header" href="#example-command" id="example-command">Example command:</a></h2>
+<pre><code>Ping: $ping ms
+</code></pre>
+<h4><a class="header" href="#expected-output" id="expected-output">Expected output:</a></h4>
+<pre><code>Ping: 50 ms
+</code></pre>
+<p>⠀</p>
+<h1><a class="header" href="#authorid" id="authorid">$authorID</a></h1>
+<p>Returns message's <strong>author ID</strong>. </p>
+<h2><a class="header" href="#example-command-1" id="example-command-1">Example command:</a></h2>
+<pre><code>This command was written by &lt;@$authorID&gt;!
+</code></pre>
+<h4><a class="header" href="#expected-output-1" id="expected-output-1">Expected output:</a></h4>
+<pre><code>This command was written by @user!
+</code></pre>
+<h4><a class="header" href="#explanation" id="explanation">Explanation:</a></h4>
+<p>Discord uses this format <code>&lt;@USER_ID&gt;</code> to mention user.
+So for example let's say that <code>$authorID</code> is equal to <code>246604909451935745</code>.
+If we'll use this <code>&lt;@$authorID&gt;</code> it will be replaced with <code>&lt;@246604909451935745&gt;</code> and discord will
+interpret this as a mention <em>(@Noituri)</em>.</p>
+<h1><a class="header" href="#javascript" id="javascript">JavaScript</a></h1>
+<p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
+Discord's API is not fully supported yet but there will be more extensive
+support in the future.</p>
+<h2><a class="header" href="#currently-supported-api-functions" id="currently-supported-api-functions">Currently supported API functions:</a></h2>
+<ul>
+<li><code>setResponse(replyText)</code><br />
+where <code>replyText</code> is a string value. This command will send message to the channel from
+which command was used.</li>
+<li><code>setEmbedResponse(title, description, footer)</code><br />
+where <code>title</code>, <code>description</code>, <code>footer</code> are string values. This command will send embedded
+message to the channel from which command was used.</li>
+<li><code>setEmbedImage(imageURL)</code><br />
+where <code>imageURL</code> is a string value. This command sets image of the embedded message.
+<code>imageURL</code> has to point to the direct url of the image.</li>
+</ul>
+<h1><a class="header" href="#javascript-1" id="javascript-1">JavaScript</a></h1>
+<p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
+Discord's API is not fully supported yet but there will be more extensive
+support in the future.</p>
+<h2><a class="header" href="#currently-supported-api-functions-1" id="currently-supported-api-functions-1">Currently supported API functions:</a></h2>
+<ul>
+<li><code>setResponse(replyText)</code><br />
+where <code>replyText</code> is a string value. This command will send message to the channel from
+which command was used.</li>
+<li><code>setEmbedResponse(title, description, footer)</code><br />
+where <code>title</code>, <code>description</code>, <code>footer</code> are string values. This command will send embedded
+message to the channel from which command was used.</li>
+<li><code>setEmbedImage(imageURL)</code><br />
+where <code>imageURL</code> is a string value. This command sets image of the embedded message.
+<code>imageURL</code> has to point to the direct url of the image.</li>
+</ul>
 
                     </main>
 
@@ -158,10 +237,6 @@ If you're curious about <em>functions</em> please feel free to visit <a href="fu
                         <!-- Mobile navigation buttons -->
                         
 
-                        
-                            <a rel="next" href="CHANGELOG.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -172,10 +247,6 @@ If you're curious about <em>functions</em> please feel free to visit <a href="fu
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
 
-                
-                    <a href="CHANGELOG.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                 
             </nav>
 
@@ -208,6 +279,14 @@ If you're curious about <em>functions</em> please feel free to visit <a href="fu
         <!-- Custom JS scripts -->
         
 
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
         
 
     </body>
