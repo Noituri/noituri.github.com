@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded affix "><a href="../foreword.html">Foreword</a></li><li class="expanded affix "><a href="../CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="../plans.html">Plans</a></li><li class="expanded "><a href="../functions/introduction.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li><ol class="section"><li class="expanded "><a href="../functions/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="../functions/ping.html"><strong aria-hidden="true">1.2.</strong> $ping</a></li><li class="expanded "><a href="../functions/authorID.html"><strong aria-hidden="true">1.3.</strong> $authorID</a></li></ol></li><li class="expanded "><a href="../javascript/javascript.html" class="active"><strong aria-hidden="true">2.</strong> JavaScipt</a></li><li><ol class="section"><li class="expanded "><a href="../javascript/javascript.html" class="active"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li></ol>
+                <ol class="chapter"><li class="expanded affix "><a href="../foreword.html">Foreword</a></li><li class="expanded affix "><a href="../CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="../plans.html">Plans</a></li><li class="expanded "><a href="../functions/introduction.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li><ol class="section"><li class="expanded "><a href="../functions/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="../functions/ping.html"><strong aria-hidden="true">1.2.</strong> $ping</a></li><li class="expanded "><a href="../functions/authorID.html"><strong aria-hidden="true">1.3.</strong> $authorID</a></li><li class="expanded "><a href="../functions/dm.html"><strong aria-hidden="true">1.4.</strong> $dm</a></li><li class="expanded "><a href="../functions/membersCount.html"><strong aria-hidden="true">1.5.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="../javascript/javascript.html" class="active"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="../javascript/javascript.html" class="active"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,6 +152,14 @@
 <p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
 Discord's API is not fully supported yet but there will be more extensive
 support in the future.</p>
+<h2><a class="header" href="#available-objects-in-the-commands" id="available-objects-in-the-commands">Available objects in the commands:</a></h2>
+<ul>
+<li><code>message</code> - string value. It contains message written by the user.</li>
+<li><code>commandPrefix</code> - string value. It contains name of the used command.</li>
+<li><code>channelId</code> - string value. It contains <strong>ID</strong> of the channel where the command was used.</li>
+<li><code>userMentions</code> - array of string values. It contains user mentions <em>(pings)</em>.</li>
+<li><code>roleMentions</code> - array of string values. It contains role mentions <em>(pings)</em>.</li>
+</ul>
 <h2><a class="header" href="#currently-supported-api-functions" id="currently-supported-api-functions">Currently supported API functions:</a></h2>
 <ul>
 <li><code>setResponse(replyText)</code><br />
@@ -165,8 +173,30 @@ where <code>imageURL</code> is a string value. This command sets image of the em
 <code>imageURL</code> has to point to the direct url of the image.</li>
 <li><code>ban(userID)</code><br />
 where <code>userID</code> is a string value.</li>
+<li><code>banWithReason(userID, reason)</code><br />
+where <code>userID</code> and <code>reason</code> are the string value.</li>
+<li><code>unban(userID)</code><br />
+where <code>userID</code> is a string value.</li>
 <li><code>kick(userID)</code><br />
 where <code>userID</code> is a string value.</li>
+<li><code>kickWithReason(userID, reason)</code><br />
+where <code>userID</code> and <code>reason</code> are the string value.</li>
+<li><code>giveRole(userID, roleID)</code><br />
+where <code>userID</code> and <code>roleID</code> are the string value. This command gives the role to the user.</li>
+<li><code>takeRole(userID, roleID)</code><br />
+where <code>userID</code> and <code>roleID</code> are the string value. This command takes the role from the user.</li>
+<li><code>channelTyping()</code><br />
+Shows <em>&quot;Bot is typing...&quot;</em> message</li>
+<li><code>createChannel(name, type)</code><br />
+where <code>name</code> and <code>type</code> are the string value.
+<code>type</code> value can be either equal to <code>&quot;text&quot;</code> or <code>&quot;voice&quot;</code>.
+Providing wrong <code>type</code> will result in throwing an exception which you can catch.</li>
+<li><code>removeChannel(chanID)</code><br />
+where <code>chanID</code> is a string value.</li>
+<li><code>pinMessage(channelID, messageID)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string value.</li>
+<li><code>unpinMessage(channelID, messageID)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string value.</li>
 </ul>
 
                     </main>
@@ -174,7 +204,7 @@ where <code>userID</code> is a string value.</li>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../functions/authorID.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../functions/membersCount.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
@@ -192,7 +222,7 @@ where <code>userID</code> is a string value.</li>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../functions/authorID.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="../functions/membersCount.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
