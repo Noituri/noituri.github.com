@@ -159,6 +159,17 @@ If you're curious about <em>functions</em> please feel free to visit <a href="fu
 <ul>
 <li>Final premium preparations</li>
 <li>Space commands for premium bots</li>
+<li>Added sendChannelMessage() to JS</li>
+<li>Added $isNumber</li>
+<li>Better description for $replaceText</li>
+<li>Removed <code>#</code> from $getRoleColor</li>
+<li>Added possibility of adding custom error message to $suppressErrors</li>
+<li>Added $embedSuppressErrors</li>
+<li>Added $getServerVar in command's name for premium bots</li>
+<li>Added custom separators to $numberSeparator</li>
+<li>Fixed issue with <code>+</code> and <code>-</code> in $numberSeparator</li>
+<li>iOS release</li>
+<li>Added $isBot[]</li>
 </ul>
 <h2><a class="header" href="#december" id="december">December</a></h2>
 <ul>
@@ -313,15 +324,17 @@ where <code>userID</code> and <code>roleID</code> are the string value. This com
 <li><code>channelTyping()</code><br />
 Shows <em>&quot;Bot is typing...&quot;</em> message</li>
 <li><code>createChannel(name, type)</code><br />
-where <code>name</code> and <code>type</code> are the string value.
+where <code>name</code> and <code>type</code> are the string values.
 <code>type</code> value can be either equal to <code>&quot;text&quot;</code> or <code>&quot;voice&quot;</code>.
 Providing wrong <code>type</code> will result in throwing an exception which you can catch.</li>
 <li><code>removeChannel(chanID)</code><br />
 where <code>chanID</code> is a string value.</li>
 <li><code>pinMessage(channelID, messageID)</code><br />
-where <code>channelID</code> and <code>messageID</code> are the string value.</li>
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
 <li><code>unpinMessage(channelID, messageID)</code><br />
-where <code>channelID</code> and <code>messageID</code> are the string value.</li>
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
+<li><code>sendChannelMessage(channelID, message)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values. Sends message to the provided channel.</li>
 </ul>
 <h1><a class="header" href="#javascript-1" id="javascript-1">JavaScript</a></h1>
 <p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
@@ -364,15 +377,17 @@ where <code>userID</code> and <code>roleID</code> are the string value. This com
 <li><code>channelTyping()</code><br />
 Shows <em>&quot;Bot is typing...&quot;</em> message</li>
 <li><code>createChannel(name, type)</code><br />
-where <code>name</code> and <code>type</code> are the string value.
+where <code>name</code> and <code>type</code> are the string values.
 <code>type</code> value can be either equal to <code>&quot;text&quot;</code> or <code>&quot;voice&quot;</code>.
 Providing wrong <code>type</code> will result in throwing an exception which you can catch.</li>
 <li><code>removeChannel(chanID)</code><br />
 where <code>chanID</code> is a string value.</li>
 <li><code>pinMessage(channelID, messageID)</code><br />
-where <code>channelID</code> and <code>messageID</code> are the string value.</li>
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
 <li><code>unpinMessage(channelID, messageID)</code><br />
-where <code>channelID</code> and <code>messageID</code> are the string value.</li>
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
+<li><code>sendChannelMessage(channelID, message)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values. Sends message to the provided channel.</li>
 </ul>
 
                     </main>
